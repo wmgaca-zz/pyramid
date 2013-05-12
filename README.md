@@ -1,4 +1,4 @@
 pyramid
 =======
 
-Lightweight Python-based server... attempt :)
+Lightweight Python-based web framework... attempt :)
