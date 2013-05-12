@@ -1,13 +1,12 @@
+from lib.controller import Controller
 from lib.render import render_to
 
-class MainController(object):
+class MainController(Controller):
 
-    @classmethod
-    @render_to('main')
-    def index(self, request):
+    @render_to()
+    def index(request):
         return 'Hello, World!'
 
-    @classmethod
     @render_to('main')
-    def helloworld(self, request):
+    def helloworld(request):
         return 'Foo, bar'
