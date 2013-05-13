@@ -1,19 +1,22 @@
+# coding: utf-8
+
 import os
 
 
 def render_template(template_name, data):
     print template_name, os.getcwd(), data
 
-    with open(os.path.join(os.getcwd(), 'app/templates/%s.html.twig' % template_name)) as f:
-        fcontents = f.read()
+    template_path = os.path.join(os.getcwd(), 'app/templates/%s.html.twig' % template_name)
 
-        fcontents = fcontents.replace('{{ content }}', str(data))
+    if not os.path.exists(template_path):
+        raise NotImplementedError
+
+    with open(template_path) as f:
+        fcontents = f.read().replace('{{ content }}', str(data))
 
         print '>>>', fcontents
 
         return fcontents
-
-    raise NotImplementedError
 
 
 class render_to(object):

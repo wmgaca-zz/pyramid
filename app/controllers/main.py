@@ -1,5 +1,5 @@
-from lib.controller import Controller
-from lib.render import render_to
+from lib.types.controller import Controller
+from lib.utils.rendering import render_to
 
 class MainController(Controller):
 
