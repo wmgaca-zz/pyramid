@@ -2,10 +2,8 @@
 
 import os
 import unittest
-
-# TODO(wmgacax): Temporary (yeah, right...)
-os.chdir(os.path.join(os.getcwd(), '..', '..'))
-
+import sys
+sys.path.append(os.getcwd())
 from lib.utils import twigparser
 
 
