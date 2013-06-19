@@ -24,9 +24,6 @@ class TwigParserTestCase(unittest.TestCase):
             result = twigparser.parse(template_name)
             print result
 
-    def test_make_it_burn(self):
-        raise NotImplementedError
-
 
 if __name__ == '__main__':
     unittest.main()
